@@ -1,0 +1,17 @@
+# Verified on Python 3.11.9 (Windows 11), 2026-06-15.
+
+# Core (parsing, schema validation, data handling)
+numpy>=1.26,<2.3
+pandas>=2.1
+jsonschema>=4.20
+
+# Retrieval (Stage A)
+rank_bm25>=0.2.2
+scikit-learn>=1.4          # TF-IDF + TruncatedSVD dense embedder (fast, offline)
+sentence-transformers>=2.6 # OPTIONAL upgrade: MiniLM/BGE bi-encoder + cross-encoder teacher (OFFLINE only)
+
+# Reranker (Stage D)
+xgboost>=2.0              # rank:ndcg LambdaMART
+
+# Sandbox demo app (deploy only; not needed by the rank step)
+gradio>=4.0

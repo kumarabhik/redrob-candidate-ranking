@@ -1,0 +1,16 @@
+{
+  "embedder": "tfidf-svd",
+  "dim": 256,
+  "count": 100000,
+  "query_order": [
+    "retrieval",
+    "vectordb",
+    "ranking_eval",
+    "python_ml",
+    "llm_ft",
+    "ltr",
+    "hrtech",
+    "scale",
+    "oss"
+  ]
+}

@@ -1,0 +1,7 @@
+artifacts/
+*.csv
+__pycache__/
+*.pyc
+.git/
+demo_ranked.csv
+out/

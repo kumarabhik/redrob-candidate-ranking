@@ -1,0 +1,79 @@
+# Redrob Hackathon — Submission Metadata
+# NOTE: fields marked TODO must be filled before submitting.
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "TODO-your-team-name"
+
+primary_contact:
+  name: "TODO Full Name"
+  email: "kumaravi1098@gmail.com"
+  phone: "+91-TODO"
+
+team_members:
+  - name: "TODO Full Name"
+    email: "kumaravi1098@gmail.com"
+    role: "Team Lead / ML Engineer"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/TODO_USERNAME/redrob-candidate-ranking"
+
+sandbox_link: "https://huggingface.co/spaces/TODO_USERNAME/redrob-ranker"  # deploy src/sandbox_app.py — see SANDBOX.md
+
+reproduce_command: "python src/rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Local Windows 11 box"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.11.9"
+  os: "Windows 11 (10.0.26200)"
+  uses_gpu_for_inference: false          # rank step is CPU-only
+  has_network_during_ranking: false      # rank step makes zero network calls
+  pre_computation_required: true         # offline: embeddings + JD vectors + LambdaMART + (optional) cross-encoder
+  pre_computation_time_minutes: 6        # TF-IDF+LSA index ~4.5min + train ~1min (MiniLM/BGE upgrade longer)
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Claude"   # Claude Code: architecture, implementation, code review, docs
+
+ai_usage_summary: |
+  Built with Claude Code as a pair-programmer for architecture, implementation, test
+  design, and documentation. All design decisions (the three research pillars, the
+  hard/soft honeypot split, the weak-label rubric, the ensemble blend) were human-directed
+  and verified by running on the real data. No candidate data was sent to any hosted LLM;
+  the ranking step itself makes zero network calls.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  Three-stage, research-grounded pipeline. (A) Hybrid recall: BM25 + dense embeddings fused
+  with Reciprocal Rank Fusion (Cormack 2009) to shortlist ~6k of 100k. (B) Structured
+  person-job-fit features (Qin et al. SIGIR'18): per-aspect semantic+lexical+career-evidence
+  fit for the JD's must-haves, plus seniority band, product-vs-services, behavioral
+  availability, location, and explicit trap detectors (wrong-role title, consulting-only,
+  keyword-stuffer, job-hopper, research-only). (C) A LambdaMART reranker (XGBoost rank:ndcg)
+  trained on weak labels derived from the JD's own rubric (honeypots forced to tier 0),
+  late-fused with the rubric and an offline cross-encoder teacher. A deterministic honeypot
+  gate (logical-impossibility rules; 40/100k) keeps traps out of the top 100, and reasons are
+  assembled only from real profile fields (zero hallucination). Rank step: ~40s, CPU,
+  no network. Verified with a trap probe and a 4-way ablation.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true        # explicit honeypot gate + top-100 honeypot-rate self-check
+  reproduction_tested: true

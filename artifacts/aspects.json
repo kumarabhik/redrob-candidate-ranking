@@ -1,0 +1,263 @@
+{
+  "role_title": "Senior AI Engineer - Founding Team (talent-intelligence platform)",
+  "experience": {
+    "min": 5,
+    "max": 9,
+    "ideal_min": 6,
+    "ideal_max": 8,
+    "hard_floor": 3
+  },
+  "locations_preferred": [
+    "pune",
+    "noida",
+    "delhi",
+    "new delhi",
+    "gurgaon",
+    "gurugram",
+    "noida",
+    "ncr",
+    "hyderabad",
+    "mumbai"
+  ],
+  "country_preferred": [
+    "india"
+  ],
+  "must_have": [
+    {
+      "id": "retrieval",
+      "name": "Production embeddings-based retrieval",
+      "query": "production experience with embeddings based retrieval systems deployed to real users, sentence transformers, BGE, E5, semantic search, RAG, handling embedding drift and retrieval quality regression",
+      "skills": [
+        "embeddings",
+        "sentence transformers",
+        "bge",
+        "e5",
+        "retrieval",
+        "semantic search",
+        "rag",
+        "information retrieval",
+        "dense retrieval",
+        "vector search",
+        "neural search",
+        "huggingface",
+        "hugging face"
+      ],
+      "weight": 1.0
+    },
+    {
+      "id": "vectordb",
+      "name": "Vector DB / hybrid search infrastructure",
+      "query": "production experience operating vector databases or hybrid search infrastructure such as Pinecone, Weaviate, Qdrant, Milvus, OpenSearch, Elasticsearch, FAISS, pgvector",
+      "skills": [
+        "pinecone",
+        "weaviate",
+        "qdrant",
+        "milvus",
+        "opensearch",
+        "elasticsearch",
+        "faiss",
+        "pgvector",
+        "vector database",
+        "bm25",
+        "hybrid search",
+        "haystack",
+        "llamaindex",
+        "langchain"
+      ],
+      "weight": 0.9
+    },
+    {
+      "id": "ranking_eval",
+      "name": "Ranking systems & evaluation frameworks",
+      "query": "designing evaluation frameworks for ranking systems, NDCG, MRR, MAP, offline to online correlation, A/B testing, building search ranking or recommendation systems at scale",
+      "skills": [
+        "ndcg",
+        "mrr",
+        "map",
+        "learning to rank",
+        "ranking",
+        "recommendation",
+        "recommendation systems",
+        "recommender",
+        "a/b testing",
+        "ab testing",
+        "search ranking",
+        "evaluation",
+        "experimentation"
+      ],
+      "weight": 0.95
+    },
+    {
+      "id": "python_ml",
+      "name": "Strong Python / ML engineering",
+      "query": "strong production Python engineering, machine learning systems, deep learning, NLP, model serving and MLOps",
+      "skills": [
+        "python",
+        "machine learning",
+        "deep learning",
+        "nlp",
+        "pytorch",
+        "tensorflow",
+        "scikit-learn",
+        "mlops",
+        "mlflow",
+        "model serving"
+      ],
+      "weight": 0.7
+    }
+  ],
+  "nice_to_have": [
+    {
+      "id": "llm_ft",
+      "name": "LLM fine-tuning",
+      "query": "LLM fine-tuning with LoRA, QLoRA, PEFT",
+      "skills": [
+        "lora",
+        "qlora",
+        "peft",
+        "fine-tuning",
+        "fine tuning",
+        "instruction tuning"
+      ],
+      "weight": 0.3
+    },
+    {
+      "id": "ltr",
+      "name": "Learning-to-rank models",
+      "query": "learning to rank models, XGBoost or neural rankers, gradient boosting",
+      "skills": [
+        "xgboost",
+        "lightgbm",
+        "lambdamart",
+        "gradient boosting",
+        "catboost"
+      ],
+      "weight": 0.3
+    },
+    {
+      "id": "hrtech",
+      "name": "HR-tech / marketplace",
+      "query": "HR tech, recruiting technology, or two-sided marketplace products",
+      "skills": [
+        "recruiting",
+        "hr tech",
+        "marketplace",
+        "talent"
+      ],
+      "weight": 0.2
+    },
+    {
+      "id": "scale",
+      "name": "Distributed systems / large-scale inference",
+      "query": "distributed systems and large scale inference optimization",
+      "skills": [
+        "distributed systems",
+        "kubernetes",
+        "spark",
+        "kafka",
+        "ray",
+        "triton"
+      ],
+      "weight": 0.2
+    },
+    {
+      "id": "oss",
+      "name": "Open-source AI/ML contributions",
+      "query": "open source contributions in the AI ML space",
+      "skills": [
+        "open source",
+        "open-source",
+        "github"
+      ],
+      "weight": 0.15
+    }
+  ],
+  "disqualifiers": {
+    "consulting_firms": [
+      "tcs",
+      "tata consultancy",
+      "infosys",
+      "wipro",
+      "accenture",
+      "cognizant",
+      "capgemini",
+      "tech mahindra",
+      "hcl",
+      "mindtree",
+      "ltimindtree",
+      "larsen",
+      "deloitte",
+      "ibm global",
+      "dxc"
+    ],
+    "non_engineering_titles": [
+      "marketing",
+      "sales",
+      "hr ",
+      "human resource",
+      "recruiter",
+      "accountant",
+      "accounting",
+      "operations manager",
+      "civil",
+      "mechanical",
+      "graphic designer",
+      "content writer",
+      "seo",
+      "finance",
+      "administrative",
+      "customer success",
+      "business development",
+      "project manager",
+      "product manager",
+      "ui/ux",
+      "ux designer",
+      "frontend",
+      "front-end"
+    ],
+    "research_terms": [
+      "phd researcher",
+      "research scholar",
+      "postdoc",
+      "post-doc",
+      "academic",
+      "research assistant",
+      "research fellow"
+    ],
+    "wrong_domain_terms": [
+      "computer vision",
+      "image classification",
+      "object detection",
+      "speech recognition",
+      "asr",
+      "tts",
+      "robotics",
+      "gans",
+      "yolo",
+      "opencv",
+      "diffusion"
+    ],
+    "framework_only_terms": [
+      "langchain",
+      "llamaindex",
+      "prompt engineering"
+    ]
+  },
+  "behavioral": {
+    "good_response_rate": 0.4,
+    "stale_days": 120,
+    "good_notice_days": 30
+  },
+  "_jd_text_chars": 9564,
+  "_query_order": [
+    "retrieval",
+    "vectordb",
+    "ranking_eval",
+    "python_ml",
+    "llm_ft",
+    "ltr",
+    "hrtech",
+    "scale",
+    "oss"
+  ]
+}

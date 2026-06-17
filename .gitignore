@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS / archive junk
+__MACOSX/
+.DS_Store
+**/._*
+
+# Large / regenerable artifacts (regenerate via build_index.py / train.py / cross_encode.py)
+artifacts/embeddings.npy
+artifacts/embedder.pkl
+artifacts/jd_vectors.npy
+artifacts/candidate_ids.json
+
+# Keep small artifacts in the repo for Stage-3 convenience:
+#   artifacts/{aspects.json, model.bin, feature_names.json, index_meta.json, ce_scores.json}
+
+# Outputs
+submission.csv
+demo_ranked.csv
+out/
+
+# The 465 MB dataset is provided by organizers; do not commit it.
+**/candidates.jsonl
