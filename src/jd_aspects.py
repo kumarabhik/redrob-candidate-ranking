@@ -232,6 +232,10 @@ def aspects_from_jd_text(jd_text: str, role_title: str = "Role") -> dict:
 
 
 def build() -> dict:
+    # Serve/sandbox fallback: if the JD docx is not present (e.g. on a deployed Space) but the
+    # aspects artifact already exists, just load it instead of rebuilding from the docx.
+    if not JD_DOCX.exists() and (ARTIFACTS / "aspects.json").exists():
+        return json.loads((ARTIFACTS / "aspects.json").read_text(encoding="utf-8"))
     ARTIFACTS.mkdir(exist_ok=True)
     jd_text = docx_to_text(JD_DOCX)
     (ARTIFACTS / "jd_text.txt").write_text(jd_text, encoding="utf-8")

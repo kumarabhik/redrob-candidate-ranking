@@ -21,7 +21,7 @@ team_members:
 # ============================================================================
 github_repo: "https://github.com/kumarabhik/redrob-candidate-ranking"
 
-sandbox_link: "https://huggingface.co/spaces/TODO_USERNAME/redrob-ranker"  # deploy src/sandbox_app.py — see SANDBOX.md
+sandbox_link: "https://huggingface.co/spaces/I4mGr00T/redrob-ranker"  # Docker Space (sample-based sandbox)
 
 reproduce_command: "python src/rank.py --candidates ./candidates.jsonl --out ./submission.csv"
 
